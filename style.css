@@ -1,0 +1,250 @@
+/* Importación de fuente */
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap");
+
+/* Propiedades generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Quattrocento', serif;
+    scroll-behavior: smooth;
+}
+
+/* Barra de navegación */
+
+.navbar{
+    background-color: #040404;
+    color: white;
+    height: 48px;
+    /* width: 100%; */
+    padding: 10px 12px;
+    position: relative;
+}
+
+.checkbox, .ic{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.ic{
+    pointer-events: none;
+    font-size: 24px;
+}
+
+.checkbox{
+    opacity: 0;
+}
+
+.fi-br-cross{
+    display: none;
+}
+
+.checkbox:checked ~ .fi-br-menu-burger{
+    display: none;
+}
+
+.checkbox:checked ~ .fi-br-cross{
+    display: block;
+}
+
+.menu{
+    width: 200px;
+    position: absolute;
+    top: -142px;
+    z-index: -1;
+    right: 0px;
+    transition: 300ms;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    background-color: #6a6a6a;
+    display: block;
+    padding: 10px 12px;
+}
+
+.menu li a:hover{
+    background-color: #797979;
+}
+
+.checkbox:checked ~ .menu{
+    top: 48px;
+    z-index: 1;
+}
+
+@media (min-width: 627px){
+    .checkbox, .fi-br-cross, .fi-br-menu-burger{
+        display: none;
+    }
+    .menu{
+        top: 0;
+        z-index: 1;
+        width: unset;
+        display: flex;
+    }
+
+    .menu li a{
+        height: 48px;
+        padding: 15px 12px 6px;
+    }
+}
+
+/* Fin de barra de navegación */
+
+/* Cards - Platillos y Menú*/
+
+.contenedor{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.card{
+    width: 33%;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+}
+
+.card .contenido-texto{
+    padding: 15px;
+    text-align: center;
+}
+
+h4{
+    font-weight: 1000;
+    margin-bottom: 10px;
+}
+
+.card .contenido-texto p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.card .contenido-texto a{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(8, 121, 8);
+    border: 1px solid rgb(8, 121, 8);
+    border-radius: 4px;
+}
+
+.card .contenido-texto a:hover{
+    background-color: rgb(8, 121, 8);
+    color: #fff;
+}
+
+/* Fin Cards - Platillos y menú */
+
+/* Reseñas */
+
+.comentarios{
+    margin: 20px 0px; 
+}
+
+.form_comentarios textarea{
+    width: 100%;
+    height: 84px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 84px;
+    max-height: 300px;
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #4b65d1;
+}
+
+.form_comentarios .btn{
+    background: #4b65d1;
+    border-radius: 0;
+    color: #fff;
+    margin: 10px 0px;
+}
+
+.form_comentarios .btn:hover{
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, .35);
+}
+
+.pic{
+    width: 64px;
+    height: 64px;
+}
+
+.media{
+    border-top: 1px solid #bfbfbf;
+    padding: 20px;
+}
+
+.media img{
+    margin-right: 20px;
+}
+
+.media .nombre span{
+    font-size: 12px;
+    color: #464646;
+    margin-left: 10px;
+}
+
+.media .nombre{
+    color: #4b65d1;
+    margin-bottom: 0px;
+}
+
+.media .comentario{
+    margin-top: 10px;
+}
+
+.media .botones{
+    margin-bottom: 10px;
+}
+
+.media .botones a{
+    color: #acacac;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+/* Fin Reseñas */
+
+/* Estilos Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(206, 250, 235, 0.829);
+}
+
+.redes{
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Fin Footer*/
