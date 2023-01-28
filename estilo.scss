@@ -16,9 +16,14 @@
         background-color: #040404;
         color: white;
         height: 48px;
-        /* width: 100%; */
         padding: 10px 12px;
         position: relative;
+
+        .title-nav{
+            font-size: 24px;
+            align-items: center;
+            font-weight: bold;
+        }
     
         .checkbox, .ic{
             width: 24px;
@@ -95,23 +100,40 @@
                     padding: 15px 12px 6px;
                 }
             }
+
+
+
         }
     }
     /* Fin del navbar */
+
+    .cont_nosotros{
+        display: flex;
+        flex-wrap: wrap;
+
+        h2{
+            text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        }
+        .ubicacion{
+            .tituloUbicacion{
+                    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+            }
+        }
+    }
 
 
     /* Inicio sección Menu - Top Platillos */
     .contenedor{
         width: 100vw;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        max-width: 1100px;
+        display: grid;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
         .card{
-            width: 33%;
+            width: auto;
             margin: 20px;
             border-radius: 8px;
             overflow: hidden;
@@ -156,6 +178,20 @@
         h4{
             font-weight: 1000;
             margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 627px){
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 380px){
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr;
         }
     }
 
@@ -266,19 +302,33 @@
 
     /* Fin Sección Reseñas */
 
+    /* Sobre Nosotros */
+
+    .cont_nosotros{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    /* Fin Sobre Nosotros */
+
     /* Estilos Footer */
 
     footer{
         display: flex;
         justify-content: space-between;
-        background-color: rgba(206, 250, 235, 0.829);
-    }
+        background-color: #040404;
 
-    .redes{
-        width: 2rem;
-        height: 2rem;
+        p{
+            color: #fff;
+            text-align: center;
+        }
+
+        .redes{
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
     /* Fin Footer*/
-
 }
