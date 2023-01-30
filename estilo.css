@@ -14,8 +14,6 @@
   /* Fin del navbar */
   /* Inicio sección Menu - Top Platillos */
   /* Fin sección Menu - Top Platillos */
-  /* Inicio sección Reseñas */
-  /* Fin Sección Reseñas */
   /* Sobre Nosotros */
   /* Fin Sobre Nosotros */
   /* Estilos Footer */
@@ -185,17 +183,21 @@
   flex-wrap: wrap;
 }
 * footer {
-  display: flex;
-  justify-content: space-between;
   background-color: #040404;
 }
 * footer p {
   color: #fff;
   text-align: center;
+  display: block;
+  padding-top: 10px;
+  margin: 0;
 }
 * footer .redes {
   width: 2rem;
   height: 2rem;
+}
+* footer .contenedor-redes {
+  text-align: center;
 }
 
 /*# sourceMappingURL=estilo.css.map */

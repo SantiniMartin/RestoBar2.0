@@ -241,19 +241,22 @@ h4{
 /* Estilos Footer */
 
 footer{
-    display: flex;
-    justify-content: space-between;
     background-color: #040404;
 }
 
 .copy{
     color: #fff;
-    align-items: center;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    margin: 0;
 }
 
 .redes{
     width: 2rem;
     height: 2rem;
 }
-
+.contenedor-redes{
+    text-align: center;
+}
 /* Fin Footer*/
